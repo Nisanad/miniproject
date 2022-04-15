@@ -29,26 +29,31 @@ export default function Login({ token }) {
     }
 
     const loginForm = () => (
-        <div className={styles.gridContainer}>
-            <div>
+        <div class="flex items-center justify-center min-h-screen bg-gray-100">
+        <div class="px-8 py-6 mt-4 text-left bg-white shadow-lg">
+        <div class="flex justify-center">
+    
+        <h3 class="text-2xl font-bold text-center">Login to your account</h3>
+                <div>
                 Username:
-            </div>
-            <div>
+                </div>
+                <div>
                 <input type="text"
                     name="username"
                     placeholder="username"
-                    onChange={(e) => setUsername(e.target.value)}
-                />
-            </div>
-            <div>
+                    onChange={(e) => setUsername(e.target.value)}/>
+                 </div>
+                <div>
                 Password:
-            </div>
-            <div>
+                </div>
+                <div>
                 <input type="password"
                     name="password"
                     placeholder="password"
                     onChange={(e) => setPassword(e.target.value)} />
-            </div>
+                </div>
+                </div>
+        </div>
         </div>
     )
 
