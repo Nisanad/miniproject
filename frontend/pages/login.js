@@ -29,32 +29,34 @@ export default function Login({ token }) {
     }
 
     const loginForm = () => (
-        <div class="flex items-center justify-center min-h-screen bg-gray-100">
-        <div class="px-8 py-6 mt-4 text-left bg-white shadow-lg">
-        <div class="flex justify-center">
-    
-        <h3 class="text-2xl font-bold text-center">Login to your account</h3>
-                <div>
-                Username:
+
+
+        
+                <div >
+
+                    <h3 class="text-2xl font-bold text-center ">Login to your account</h3><br></br><br></br>
+                    <div>
+                        Username:
+                    </div>
+                    <div>
+                        <input type="text"
+                            name="username"
+                            placeholder="username"
+                            onChange={(e) => setUsername(e.target.value)} />
+                    </div>
+                    <br></br><br></br>
+                    <div>
+                        Password:
+                    </div>
+                    <div>
+                        <input type="password"
+                            name="password"
+                            placeholder="password"
+                            onChange={(e) => setPassword(e.target.value)} />
+                    </div>
                 </div>
-                <div>
-                <input type="text"
-                    name="username"
-                    placeholder="username"
-                    onChange={(e) => setUsername(e.target.value)}/>
-                 </div>
-                <div>
-                Password:
-                </div>
-                <div>
-                <input type="password"
-                    name="password"
-                    placeholder="password"
-                    onChange={(e) => setPassword(e.target.value)} />
-                </div>
-                </div>
-        </div>
-        </div>
+       
+
     )
 
     const copyText = () => {
@@ -66,13 +68,14 @@ export default function Login({ token }) {
             <Head>
                 <title>Login</title>
             </Head>
+
+            <Navbar />
             <div className={styles.container}>
-                <Navbar />
                 <h1>Login</h1>
                 <div><b>Token:</b> {token.substring(0, 15)}...
-                <button onClick={copyText}> Copy token </button>
+                    <button onClick={copyText}> Copy token </button>
                 </div>
-                <br/>
+                <br />
                 <div>
                     Status:  {status}
                 </div>
